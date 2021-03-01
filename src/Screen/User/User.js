@@ -64,7 +64,7 @@ const User = () => {
                 {repos.map((repo)=>(
 
                     <div class="col grid-item">
-                        <strong>{repo.name}</strong>
+                        <a className="link" href={`https://github.com/${user.login}/${repo.name}`}><strong>{repo.name}</strong></a>
                         {repo.description}
                     </div>
                 ))}

@@ -19,7 +19,7 @@ const Posts=({setUser,post,HandleClickFollower})=> {
         <CardMedia
           className={classes.media}
           image={post.avatar_url}
-          title="Contemplative Reptile"
+          title={post.login}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
@@ -32,7 +32,7 @@ const Posts=({setUser,post,HandleClickFollower})=> {
         <Button onClick={()=>HandleClickFollower(post.login)} size="small" color="primary">
           following
         </Button>
-        <Button size="small" color="primary">
+        <Button size="small" color="secondary">
           <Link className={classes.link} onClick={()=>setUser(post.login)} to={`/user/${post.login}`} >Learn More</Link>
         </Button>
       </CardActions>
